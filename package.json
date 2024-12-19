@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --experimental-build-mode compile",
     "migrate": "npx prisma migrate deploy",
-    "release": "npm run migrate && npm run build",
+    "generate": "next build --experimental-build-mode generate",
+    "release": "npm run migrate && npm run generate",
     "start": "next start",
     "lint": "next lint"
   },
