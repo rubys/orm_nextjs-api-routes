@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "migrate": "npx prisma migrate deploy",
+    "release": "npm run migrate && npm run build",
     "start": "next start",
     "lint": "next lint"
   },
